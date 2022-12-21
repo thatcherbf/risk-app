@@ -1,0 +1,291 @@
+.title {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.units-box-inputs {
+  width: 100%;
+  display: inline-flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+#enter {
+  width: 100%;
+}
+
+.cholesterol-label {
+  width: 100%;
+}
+
+.cholesterol-units {
+  width: 50%;
+  display: inline;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.height-units, .weight-units {
+  width: 25%;
+  display: inline;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.inputs {
+  height: auto;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.inputs-col1, .inputs-col2 {
+  flex: 50%;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.inputs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.outer-box {
+  float: none;
+  margin: 0 auto;
+  width: 55%;
+  height: inherit;
+}
+
+.left-side, .right-side {
+  display: inline-block;
+  width: 22.5%;
+  height: 100%;
+}
+
+.age-box, .TC-box, .LDL-box, .HDL-box, .SBP-box, .height-box, .weight-box, .BMI-box {}
+
+.input-items {
+  height: 15%;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#sex-label, #age-label, #TC-label, #LDL-label, #HDL-label, #SBP-label, #height-label, #weight-label, #BMI-label, #diab-label, #smoke-label, #fmrtob-label, #famhx-label, #trtbp-label {
+  width: 100%;
+}
+
+#button-box {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#alert-box {
+  width: 50%;
+  margin: 0 auto;
+  border: solid red 1px;
+  text-align: center;
+  display: none;
+}
+
+#alert {
+  color: red;
+  font-weight: 700;
+}
+
+#calculate-risk {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  width: 20%;
+}
+
+#lpaGraph, #rxGraph {
+  width: 100%;
+}
+
+#lpaGraph-value-box, #rxGraph-value-box {
+  margin: 0 auto;
+  width: 100%;
+  color: rgb(50, 50, 50);
+  display: none;
+}
+
+#lpaGraph-risk, #rxGraph-risk {
+  width: 100%;
+  text-align: center;
+  font-size: 20;
+  display: inline-block;
+}
+
+#lpaGraph-risk-value, #rxGraph-risk-value {
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  /*background-color: rgb(230, 230, 230);
+  border: solid rgb(230, 230, 230) 1px;*/
+  background-color: #5B7BD4;
+  border: solid #5B7BD4 1px;
+  border-radius: 15px;
+  color: white;
+}
+
+#lpaGraph-risk-treatment-box, #rxGraph-risk-treatment-box{
+  margin: 0 auto;
+  width: 100%;
+  height: inherit;
+  color: rgb(50, 50, 50);
+  display: none;
+}
+
+#lpaGraph-risk-treatment-left-box, #lpaGraph-risk-treatment-right-box, #rxGraph-risk-treatment-left-box, #rxGraph-risk-treatment-right-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#lpaGraph-risk-t-1, #lpaGraph-risk-t-2, #rxGraph-risk-t-1, #rxGraph-risk-t-2 {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  text-align: center;
+  font-size: 15px;
+  display: inline-block;
+}
+
+#lpaGraph-risk-value-t-1, #rxGraph-risk-value-t-1 {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 0;
+  width: 70%;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+/*  background-color: #C11F42;
+  border: solid #C11F42 1px;*/
+  background-color: #5B7BD4;
+  border: solid #5B7BD4 1px;
+  border-radius: 15px;
+  color:white;
+}
+
+#lpaGraph-risk-value-t-2, #rxGraph-risk-value-t-2 {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 0;
+  width: 70%;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  background-color: #5B7BD4;
+  border: solid #5B7BD4 1px;
+  border-radius: 15px;
+  color:white;
+}
+
+#lpa-after, #lpa-after-1 {
+  font-size: 15;
+  color: rgb(50, 50, 50);
+  display: none;
+}
+
+#rx-sliders {
+  height: auto;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.ldl-slider-box, .sbp-slider-box {
+  flex: 50%;
+  float: left;
+  height: inherit;
+  width: 45%;
+  margin-right: 5%;
+}
+
+html {
+  display: table-cell;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  /*background-color: rgb(245, 249, 255);*/
+}
+
+img {
+  width: 15%;
+}
+
+label {
+  width: 100%;
+  cursor: default;
+}
+
+input {
+  cursor: pointer;
+}
+
+input[type=number] {
+  width: 95%;
+  padding: 2px;
+}
+
+select {
+  width: 95%;
+  padding: 2px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #12317D;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #12317D;
+}

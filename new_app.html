@@ -1,0 +1,272 @@
+<html>
+<head>
+  <!--<script type="text/javascript" src="app.js"></script>-->
+  <script type="text/javascript" src="obf_js.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body oncontextmenu="return false">
+  <div class="left-side"></div>
+  <div class="outer-box">
+    <div class="title">
+      <img src="logo.png" alt="Logo" id="logo">
+    </div>
+
+
+    <div>
+      <p id='enter'> Enter your health information below: </p>
+    </div>
+
+    <div class="units-box-inputs">
+      <div class="cholesterol-units">
+        <p class="cholesterol-label">Cholesterol units:</p>
+        <label>
+          <input type="radio" id="mmolL" name="chol-unit" checked="checked" value="mmol/L" />mmol/L
+        </label>
+        <label>
+          <input type="radio" id="mgdL" name="chol-unit" value="mg/dL" />mg/dL
+        </label>
+      </div>
+
+      <div class="height-units">
+        <p class="height-label">Height units:</p>
+        <label>
+          <input type="radio" id="cm" name="height-unit" checked="checked" value="cm" />cm
+        </label>
+        <label>
+          <input type="radio" id="in" name="height-unit" value="in" />in
+        </label>
+      </div>
+
+      <div class="weight-units">
+        <p class="weight-label">Weight units:</p>
+        <label>
+          <input type="radio" id="kg" name="weight-unit" checked="checked" value="kg" />kg
+        </label>
+        <label>
+          <input type="radio" id="lbs" name="weight-unit" value="lbs" />lbs
+        </label>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="inputs">
+      <div class="inputs-col1">
+        <div class="input-items">
+          <label for="sex-box" id="sex-label"> Sex </label><br>
+          <select name="sex-box" id="sex-box">
+            <option value=1>Male</option>
+            <option value=0>Female</option>
+          </select>
+        </div>
+
+        <div class="input-items">
+          <label for="age-input" id="age-label"> Age (ages 30-75) </label><br>
+          <div class="age-box">
+            <input type="number" id="age-input" name="age-input"><br>
+          </div>
+        </div>
+
+        <p id='cholesterol-inputs-label'>Cholesterol</p>
+
+        <div class="input-items">
+          <label for="TC-input" id="TC-label"> Total Cholesterol (mmol/L) (range 3.5 - 8.0) </label><br>
+          <div class="TC-box">
+            <input type="number" id="TC-input" name="TC-input"><br>
+          </div>
+        </div>
+
+        <div class="input-items">
+          <label for="LDL-input" id="LDL-label"> LDL Cholesterol (mmol/L) (range 2.0 - 5.0) </label><br>
+          <div class="LDL-box">
+            <input type="number" id="LDL-input" name="LDL-input"><br>
+          </div>
+        </div>
+
+        <div class="input-items">
+          <label for="HDL-input" id="HDL-label"> HDL Cholesterol (mmol/L) (range 0.6 - 2.8) </label><br>
+          <div class="HDL-box">
+            <input type="number" id="HDL-input" name="HDL-input"><br>
+          </div>
+        </div>
+
+        <div class="input-items">
+          <label for="SBP-input" id="SBP-label"> Systolic Blood Pressure (mmHg) (range 90 - 200) </label><br>
+          <div class="SBP-box">
+            <input type="number" id="SBP-input" name="SBP-input"><br>
+          </div>
+        </div>
+
+        <div class="input-items">
+          <label for="trtbp-box" id="trtbp-label"> Are you taking a medicine to lower blood pressure? </label><br>
+          <select name="trtbp-box" id="trtbp-box">
+            <option value=''></option>
+            <option value=0>No</option>
+            <option value=1>Yes</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="inputs-col2">
+        <div class="input-items">
+          <label for="height-input" id="height-label"> Height (cm) </label><br>
+          <div class="height-box">
+            <input type="number" id="height-input" name="height-input"><br>
+          </div>
+        </div>
+
+        <div class="input-items">
+          <label for="weight-input" id="weight-label"> Weight (kg) </label><br>
+          <div class="weight-box">
+            <input type="number" id="weight-input" name="weight-input"><br>
+          </div>
+        </div>
+
+        <p id='cholesterol-inputs-label'>BMI</p>
+
+        <div class="input-items">
+          <label for="BMI-input" id="BMI-label"> BMI: </label><br>
+          <div class="BMI-box">
+            <input type="number" id="BMI-input" name="BMI-input" readonly="readonly"><br>
+          </div>
+        </div>
+        <!-- BMI value edit script -->
+
+        <div class="input-items">
+          <label for="diab-box" id="diab-label"> Do you have diabetes? </label><br>
+          <select name="diab-box" id="diab-box">
+            <option value=''></option>
+            <option value=0>No</option>
+            <option value=1>Yes</option>
+          </select>
+        </div>
+
+        <div class="input-items">
+          <label for="smoke-box" id="smoke-label"> Do you currently smoke? </label><br>
+          <select name="smoke-box" id="smoke-box">
+            <option value=''></option>
+            <option value=0>No</option>
+            <option value=1>Yes</option>
+          </select>
+        </div>
+
+        <div class="input-items">
+          <label for="fmrtob-box" id="fmrtob-label"> Have you ever smoked? </label><br>
+          <select name="fmrtob-box" id="fmrtob-box">
+            <option value=''></option>
+            <option value=0>No</option>
+            <option value=1>Yes</option>
+          </select>
+        </div>
+
+        <div class="input-items">
+          <label for="famhx-box" id="famhx-label"> Has anyone in your family had a heart attack or stroke? </label><br>
+          <select name="famhx-box" id="famhx-box">
+            <option value=''></option>
+            <option value=0>No</option>
+            <option value=1>Yes</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="alert-box" id="alert-box">
+      <p class="alert">Please make sure to fill all of the fields</p>
+    </div>
+
+    <div class="button-box">
+      <button class="calculate-risk" type="button" id="calculate-risk"> Calculate Risk </button>
+    </div>
+
+    <div class="graph-box">
+      <div id="lpaGraph"></div>
+      <br>
+      <div id="lpaGraph-value-box">
+        <div id="lpaGraph-risk"></div><br><br><div id="lpaGraph-risk-value"></div>
+        <div id="lpaGraph-risk-treatment-box">
+          <div id="lpaGraph-risk-treatment-left-box">
+            <div id="lpaGraph-risk-t-1"></div><br><br><div id="lpaGraph-risk-value-t-1"></div>
+          </div>
+          <div id="lpaGraph-risk-treatment-right-box">
+            <div id="lpaGraph-risk-t-2"></div><br><br><div id="lpaGraph-risk-value-t-2"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="lpa-after" id="lpa-after">
+        <p>This estimated risk does not take into account the Lp(a) levels in your blood. To see how much your Lp(a) level increases your risk of having a heart attack or stroke, enter your Lp(a) level using the slider bar below. A new line will
+          appear on the graph showing you how much your Lp(a) level increases your risk of having a heart attack or stroke at all ages up to age 80.</p>
+        <div class="lpa-units">
+          <p class="lpa-label">Lp(a) units:</p>
+          <label>
+            <input type="radio" id="lpa-nmol" name="lpa-unit" checked="checked" value="nmol/L" />nmol/L
+          </label>
+          <label>
+            <input type="radio" id="lpa-mgdL" name="lpa-unit" value="mg/dL" />mg/dL
+          </label>
+        </div>
+
+        <label for="lpa-slider" id="lpa-slider-label">Enter your Lp(a) level to see how much your Lp(a) level increases your risk of heart attack and stroke.</label>
+        <span id="lpa-value-label">Lpa level:</span> <span id="lpa-value">50</span>
+        <br><br>
+        <input type="range" min="0" max="500" value="16.6" step="0.01" class="slider" id="lpa-slider">
+        <br><br><br>
+
+        <p>First, it is important to be aware that the level of Lp(a) in your blood is mostly inherited. If you have high blood levels of Lp(a), then other members of your family may also be at increased risk of heart attack or stroke because of high
+          Lp(a) levels. So, if your Lp(a) level is elevated, or if your risk of heart attack and stroke is increased by your Lp(a) levels, then other members of your family may also benefit from measuring their Lp(a) levels to determine if they are
+          at increased risk.</p>
+        <p>Unfortunately, Lp(a) levels in the blood cannot be lowered by diet or exercise. In addition, there are no approved medicines that specifically lower Lp(a) levels. Fortunately, new very powerful Lp(a) lowering therapies are currently in
+          development.</p>
+        <p>However, until those medications become available, you can still reduce your risk of having a heart attack or stroke despite having high Lp(a) levels. Current clinical practice guidelines recommend that if you are at increased risk of
+          heart attack and stroke caused by elevated Lp(a) levels, then you should more intensely lower other causes of heart attack and stroke, such as your LDL or blood pressure level.</p>
+        <p>Although lowering LDL and blood pressure will not lower your Lp(a) level, it will reduce your overall risk of having a heart attack and stroke.</p>
+        <p>Using the slider bars below, you can estimate how much you would have to lower your LDL or blood pressure to reduce your risk of heart attack and stroke by about the same amount as the increased risk caused by your Lp(a) level. This
+          information can help guide you about how much more intensely you need to lower your LDL and blood pressure beyond current recommendations to improve your cardiovascular health despite having high Lp(a) levels.</p>
+        <br><br>
+
+        <div id="rxGraph"></div>
+        <br>
+        <div id="rxGraph-value-box">
+          <div id="rxGraph-risk"></div><br><br><div id="rxGraph-risk-value"></div>
+          <div id="rxGraph-risk-treatment-box">
+            <div id="rxGraph-risk-treatment-left-box">
+              <div id="rxGraph-risk-t-1"></div><br><br><div id="rxGraph-risk-value-t-1"></div>
+            </div>
+            <div id="rxGraph-risk-treatment-right-box">
+              <div id="rxGraph-risk-t-2"></div><br><br><div id="rxGraph-risk-value-t-2"></div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <p>You can use the slider bars below to estimate how much you can reduce your risk of having a heart attack or stroke by lowering your LDL and blood pressure levels. After using the slider bars, a new line will appear on the graph showing you
+          your risk of having a heart attack or stroke that includes both your Lp(a) level and the effect of lowering your LDL or blood pressure.</p>
+        <br>
+        <p>When the light blue line and the dark blue line overlap, this is the amount you have to reduce your LDL or blood pressure in order to compensate for the increased risk caused by your Lp(a) levels.</p>
+        <div class="rx-sliders">
+          <div class="ldl-slider-box">
+            <label for="ldl-slider" id="ldl-slider-label">How much should I lower my LDL?</label>
+            <span id="ldl-value-label"> - </span> <span id="ldl-value">0</span>
+            <br><br>
+            <input type="range" min="0" max="1.5" value="0" step="0.01" class="slider" id="ldl-slider">
+          </div>
+
+          <div class="sbp-slider-box">
+            <label for="sbp-slider" id="sbp-slider-label">How much should I lower my blood pressure?</label>
+            <span id="sbp-value-label"> - </span> <span id="sbp-value">0</span>
+            <br><br>
+            <input type="range" min="0" max="15" value="0" step="1" class="slider" id="sbp-slider">
+          </div>
+        </div>
+        <br><br><br><br>
+        <h3>Reducing your risk of heart attack and stroke</h3>
+        <p>Because lowering LDL and systolic blood pressure does not reduce your Lp(a) levels, Lp(a) is still circulating in your blood and can damage your arteries. For that reason, the best way to reduce your risk of having a heart attack or stroke
+          caused by Lp(a) is with a medicine that directly lowers Lp(a).</p>
+        <p>Potent Lp(a) lowering therapies are currently being developed. Hopefully, these new therapies will become available soon and can be used to directly reduce the risk of heart attack and stroke among persons with high Lp(a) levels.</p>
+      </div>
+    </div>
+  </div>
+  <div class="right-side"></div>
+</body>
+</html>

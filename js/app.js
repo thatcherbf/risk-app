@@ -144,8 +144,8 @@ window.onload = function() {
           chol_units = units_chol[i].value;
         }
       }
-
-      if (units_chol == 'mgdL') {
+      //console.log("chol_units: ", chol_units)
+      if (chol_units == 'mg/dL') {
         ldl = ldl / 38.67
         hdl = hdl / 38.67
       }
@@ -302,9 +302,18 @@ window.onload = function() {
         sbp_value.innerHTML = document.getElementById("sbp-slider").value;
       }
 
+      console.log("sbp_value.innerHTML: ", sbp_value.innerHTML)
+      console.log("ldl_value.innerHTML: ", ldl_value.innerHTML)
+      console.log("sbp_value.innerHTML == 0: ", sbp_value.innerHTML == 0)
+      console.log("ldl_value.innerHTML == 0: ", ldl_value.innerHTML == 0)
+
       var graph2_data;
-      if (ldl_slider.value == 0 && sbp_slider.value == 0) {
+      if (ldl_value.innerHTML == 0 && sbp_value.innerHTML == 0) {
         graph2_data = data;
+
+        document.getElementById('rxGraph-risk').style.display = 'inline-block';
+        document.getElementById('rxGraph-risk-value').style.display = 'inline-block';
+        document.getElementById('rxGraph-risk-treatment-box').style.display = 'none';
       } else {
         ldl_dec = ldl_slider.value * -1;
         sbp_dec = sbp_slider.value * -1;
@@ -356,11 +365,11 @@ window.onload = function() {
 
         var riskValue_rx = Math.round(risk_rx[risk_rx.length - 1] * 100) / 100;
 
-        console.log(document.getElementById('rxGraph-risk-treatment-box').style.display);
+        //console.log(document.getElementById('rxGraph-risk-treatment-box').style.display);
 
-        if (sbp_dec != 0 && ldl_dec != 0) {
+        if (sbp_value.innerHTML != 0 && ldl_value.innerHTML != 0) {
           rxGraph_text_t_2.innerHTML = "With an Lp(a) of " + lpaValue + " " + units_lpa + " and an estimated risk of " + curr_risk + "%, lowering your LDL by " + ldl_value.innerHTML + " " + chol_units + " and your SBP by " + sbp_value.innerHTML + " mmHg beginning at age " + age + " will reduce your risk of having a heart attack or stroke to:";
-        } else if (sbp_dec != 0 && ldl_dec == 0) {
+        } else if (sbp_slider.value != 0 && ldl_slider.value == 0) {
           rxGraph_text_t_2.innerHTML = "With an Lp(a) of " + lpaValue + " " + units_lpa + " and an estimated risk of " + curr_risk + "%, lowering your SBP by " + sbp_value.innerHTML + " mmHg beginning at age " + age + " will reduce your risk of having a heart attack or stroke to:";
         } else {
           rxGraph_text_t_2.innerHTML = "With an Lp(a) of " + lpaValue + " " + units_lpa + " and an estimated risk of " + curr_risk + "%, lowering your LDL by " + ldl_value.innerHTML + " " + chol_units + " beginning at age " + age + " will reduce your risk of having a heart attack or stroke to:";
@@ -550,7 +559,7 @@ function calculate(age, sex, ldl, ldl_rx, ldl_dec, age_start_rx_ldl, age_stop_rx
     ]
   ];
   b_beta = [
-    [0.00432149552442511, 1.96190161699591e-05, [1.11270781170849, 1.23876285117286],
+    [0.00432149552442511, 0.0000196190161699591, [1.11270781170849, 1.23876285117286],
       [0.336045717103265, 0.462419315914295], 0.515257189855812, 0.0179926569543217, 0.0140518092696023, -0.201163272313767, 0
     ],
     [0.00866812947141468, 0.000260041603209642, [1.29162125334208, 0.857058215628963],
@@ -636,7 +645,8 @@ function calculate(age, sex, ldl, ldl_rx, ldl_dec, age_start_rx_ldl, age_stop_rx
     }
   }
 
-  //f_t.unshift(0);
+  f_t.unshift(0);
+  f_t = f_t.slice(0, -1)
   return (f_t)
 }
 // -------- calculate formula --------//

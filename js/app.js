@@ -302,11 +302,6 @@ window.onload = function() {
         sbp_value.innerHTML = document.getElementById("sbp-slider").value;
       }
 
-      console.log("sbp_value.innerHTML: ", sbp_value.innerHTML)
-      console.log("ldl_value.innerHTML: ", ldl_value.innerHTML)
-      console.log("sbp_value.innerHTML == 0: ", sbp_value.innerHTML == 0)
-      console.log("ldl_value.innerHTML == 0: ", ldl_value.innerHTML == 0)
-
       var graph2_data;
       if (ldl_value.innerHTML == 0 && sbp_value.innerHTML == 0) {
         graph2_data = data;

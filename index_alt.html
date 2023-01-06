@@ -4,6 +4,8 @@
   <script type="text/javascript" src="js/app_alt.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link rel="stylesheet" href="css/styles_alt.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body oncontextmenu="return false">
@@ -124,12 +126,16 @@
 
         <div class="input-items">
           <label for="trtbp-box" id="trtbp-label"> Are you taking a medicine to lower blood pressure? </label><br>
-          <select name="trtbp-box" id="trtbp-box">
-            <option value=''></option>
-            <option value=0>No</option>
-            <option value=1>Yes</option>
-          </select>
+          <div class="trtbp-box">
+            <label>
+              <input type="radio" name="trtbp-value" checked="checked" value=0><span>No</span>
+            </label>
+            <label>
+              <input type="radio" name="trtbp-value" value=1><span>Yes</span>
+            </label>
+          </div>  
         </div>
+
 
       </div>
 
@@ -160,38 +166,50 @@
 
         <div class="input-items">
           <label for="diab-box" id="diab-label"> Do you have diabetes? </label><br>
-          <select name="diab-box" id="diab-box">
-            <option value=''></option>
-            <option value=0>No</option>
-            <option value=1>Yes</option>
-          </select>
+          <div class="diab-box">
+            <label>
+              <input type="radio" name="diab-value" checked="checked" value=0><span>No</span>
+            </label>
+            <label>
+              <input type="radio" name="diab-value" value=1><span>Yes</span>
+            </label>
+          </div>  
         </div>
 
         <div class="input-items">
           <label for="smoke-box" id="smoke-label"> Do you currently smoke? </label><br>
-          <select name="smoke-box" id="smoke-box">
-            <option value=''></option>
-            <option value=0>No</option>
-            <option value=1>Yes</option>
-          </select>
+          <div class="smoke-box">
+            <label>
+              <input type="radio" name="smoke-value" checked="checked" value=0><span>No</span>
+            </label>
+            <label>
+              <input type="radio" name="smoke-value" value=1><span>Yes</span>
+            </label>
+          </div>  
         </div>
 
         <div class="input-items">
           <label for="fmrtob-box" id="fmrtob-label"> Have you ever smoked? </label><br>
-          <select name="fmrtob-box" id="fmrtob-box">
-            <option value=''></option>
-            <option value=0>No</option>
-            <option value=1>Yes</option>
-          </select>
+          <div class="fmrtob-box">
+            <label>
+              <input type="radio" name="fmrtob-value" checked="checked" value=0><span>No</span>
+            </label>
+            <label>
+              <input type="radio" name="smoke-value" value=1><span>Yes</span>
+            </label>
+          </div>  
         </div>
 
         <div class="input-items">
           <label for="famhx-box" id="famhx-label"> Has anyone in your family had a heart attack or stroke? </label><br>
-          <select name="famhx-box" id="famhx-box">
-            <option value=''></option>
-            <option value=0>No</option>
-            <option value=1>Yes</option>
-          </select>
+          <div class="famhx-box">
+            <label>
+              <input type="radio" name="famhx-value" checked="checked" value=0><span>No</span>
+            </label>
+            <label>
+              <input type="radio" name="famhx-value" value=1><span>Yes</span>
+            </label>
+          </div>  
         </div>
       </div>
     </div>

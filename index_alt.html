@@ -1,9 +1,9 @@
 <html>
 <head>
   <!--<script type="text/javascript" src="app.js"></script>-->
-  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/app_alt.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles_alt.css">
 </head>
 
 <body oncontextmenu="return false">
@@ -72,14 +72,19 @@
 
     <div class="inputs">
       <div class="inputs-col1">
+
         <div class="input-items">
           <label for="sex-box" id="sex-label"> Sex </label><br>
-          <select name="sex-box" id="sex-box">
-            <option value=1>Male</option>
-            <option value=0>Female</option>
-          </select>
+          <div class="sex-box">
+            <label>
+              <input type="radio" name="sex-value" checked="checked" value=1><span>Male</span>
+            </label>
+            <label>
+              <input type="radio" name="sex-value" value=0><span>Female</span>
+            </label>
+          </div>  
         </div>
-
+        
         <div class="input-items">
           <label for="age-input" id="age-label"> Age (ages 30-75) </label><br>
           <div class="age-box">

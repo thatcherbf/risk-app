@@ -323,8 +323,8 @@ body {
   width: 100%;
   display: inline-flex;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
   font-size: 14px;
-  font-weight: 500;
   accent-color: #517896;
   /*background-color: rgb(245, 249, 255);*/
 }

@@ -85,7 +85,13 @@ window.onload = function() {
     slider.max = 500;
     lpa_value.innerHTML = slider.value;
 
-    var sex = document.getElementById("sex-box").value;
+    var selection = document.getElementsByName("sex-value");
+    for (var i = 0; i < selection.length; i++) {
+      if (selection[i].checked) {
+        var sex = selection[i].value;
+      }
+    }
+
     var units_lpa = document.getElementsByName("lpa-unit");
     for (var i = 0; i < units_lpa.length; i++) {
       if (units_lpa[i].checked) {
@@ -115,7 +121,15 @@ window.onload = function() {
     var age, sex, ldl, ldl_rx, ldl_dec, age_start_rx_ldl, age_stop_rx_ldl, hdl, sbp, sbp_rx, sbp_dec, age_start_rx_sbp, age_stop_rx_sbp, smoke, fmr_tob, prevalent_diabetes_35, bmi, fam_hx_chd
 
     age = document.getElementById("age-input").value
-    sex = document.getElementById("sex-box").value
+    //sex = document.getElementById("sex-box").value
+
+    var selection = document.getElementsByName("sex-value");
+    for (var i = 0; i < selection.length; i++) {
+      if (selection[i].checked) {
+        sex = selection[i].value;
+      }
+    }
+
     ldl = document.getElementById("LDL-input").value
     ldl_rx = 0
     ldl_dec = 0

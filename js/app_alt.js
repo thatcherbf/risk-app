@@ -142,10 +142,34 @@ window.onload = function() {
     age_stop_rx_sbp = 80
 
     hdl = document.getElementById("HDL-input").value
-    smoke = document.getElementById("smoke-box").value
-    fmr_tob = document.getElementById("fmrtob-box").value
-    diab = document.getElementById("diab-box").value
-    famhx = document.getElementById("famhx-box").value
+
+    var selection = document.getElementsByName("smoke-value");
+    for (var i = 0; i < selection.length; i++) {
+      if (selection[i].checked) {
+        smoke = selection[i].value;
+      }
+    }
+
+    var selection = document.getElementsByName("fmrtob-value");
+    for (var i = 0; i < selection.length; i++) {
+      if (selection[i].checked) {
+        fmr_tob = selection[i].value;
+      }
+    }
+
+    var selection = document.getElementsByName("diab-value");
+    for (var i = 0; i < selection.length; i++) {
+      if (selection[i].checked) {
+        diab = selection[i].value;
+      }
+    }
+
+    var selection = document.getElementsByName("famhx-value");
+    for (var i = 0; i < selection.length; i++) {
+      if (selection[i].checked) {
+        famhx = selection[i].value;
+      }
+    }
 
     bmi = document.getElementById("BMI-input").value
 

@@ -76,8 +76,7 @@ window.onload = function() {
   document.getElementById("calculate-risk").addEventListener("click", lpaSliderUnits);
 
   function lpaSliderUnits() {
-    document.getElementById('lpaGraph-risk').style.display = 'block';
-    document.getElementById('lpaGraph-risk-value').style.display = 'block';
+    document.getElementById('lpaGraph-risk-box').style.display = 'block';
     document.getElementById('lpaGraph-risk-treatment-box').style.display = 'none';
     var slider = document.getElementById("lpa-slider");
     var lpa_value = document.getElementById("lpa-value");
@@ -263,8 +262,7 @@ window.onload = function() {
 
         var data = [lpa_line, regular_line];
 
-        document.getElementById('lpaGraph-risk').style.display = 'none';
-        document.getElementById('lpaGraph-risk-value').style.display = 'none';
+        document.getElementById('lpaGraph-risk-box').style.display = 'none';
         document.getElementById('lpaGraph-risk-treatment-box').style.display = 'inline-flex';
 
         var text_lpa_t_2 = document.getElementById('lpaGraph-risk-t-2');
@@ -307,8 +305,7 @@ window.onload = function() {
       if (ldl_value.innerHTML == 0 && sbp_value.innerHTML == 0) {
         graph2_data = data;
 
-        document.getElementById('rxGraph-risk').style.display = 'inline-block';
-        document.getElementById('rxGraph-risk-value').style.display = 'inline-block';
+        document.getElementById('rxGraph-risk-box').style.display = 'block';
         document.getElementById('rxGraph-risk-treatment-box').style.display = 'none';
       } else {
         ldl_dec = ldl_slider.value * -1;
@@ -355,8 +352,7 @@ window.onload = function() {
         var rxGraph_text_t_2 = document.getElementById('rxGraph-risk-t-2');
         var rxGraph_value_t_2 = document.getElementById('rxGraph-risk-value-t-2');
 
-        document.getElementById('rxGraph-risk').style.display = 'none';
-        document.getElementById('rxGraph-risk-value').style.display = 'none';
+        document.getElementById('rxGraph-risk-box').style.display = 'none';
         document.getElementById('rxGraph-risk-treatment-box').style.display = 'inline-flex';
 
         var riskValue_rx = Math.round(risk_rx[risk_rx.length - 1] * 100) / 100;
@@ -401,6 +397,9 @@ window.onload = function() {
         //  r: 10,
         //  b: 40,
         //  t: 40,
+        },
+        font: {
+          family: 'Roboto, sans-serif',
         }
       };
 

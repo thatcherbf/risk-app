@@ -27,6 +27,7 @@ input:focus, textarea:focus, select:focus {
 #preamble-title {
   width: 100%;
   font-size: 150%;
+  font-weight: 400;
 }
 
 #preamble {
@@ -226,7 +227,7 @@ input[type=number] {
   margin-right: 5%;
   width: 90%;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   display: inline-block;
 }
 
@@ -258,6 +259,15 @@ input[type=number] {
   border: solid #5B7BD4 1px;
   border-radius: 15px;
   color:white;
+}
+
+.lpa-units {
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+#lpa-value {
+  font-weight: 400;
 }
 
 #lpa-after, #lpa-after-1 {
@@ -292,9 +302,9 @@ body {
   height: 100%;
   width: 100%;
   display: inline-flex;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 14px;
-  font-weight: 500;
   accent-color: #517896;
   /*background-color: rgb(245, 249, 255);*/
 }
@@ -326,6 +336,7 @@ select {
   width: 100%;
   text-align: left;
   color: black;
+  font-weight: 400;
 }
 
 .furtherinfo {

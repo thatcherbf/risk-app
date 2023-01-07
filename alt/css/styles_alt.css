@@ -27,6 +27,7 @@ input:focus, textarea:focus, select:focus {
 #preamble-title {
   width: 100%;
   font-size: 150%;
+  font-weight: 400;
 }
 
 #preamble {
@@ -186,7 +187,7 @@ input[type=number] {
   display: none;
 }
 
-#alert {
+.alert {
   color: rgb(255, 0, 0);
   font-weight: 700;
 }
@@ -296,6 +297,10 @@ input[type=number] {
   display: none;
 }
 
+#lpa-value {
+  font-weight: 400;
+}
+
 #rx-sliders {
   height: auto;
   width: 100%;
@@ -313,6 +318,10 @@ input[type=number] {
   margin-right: 5%;
 }
 
+#ldl-value, #sbp-value {
+  font-weight: 400;
+}
+
 html {
   display: table-cell;
 }
@@ -322,7 +331,8 @@ body {
   height: 100%;
   width: 100%;
   display: inline-flex;
-  font-family: "Source Sans Pro", sans-serif;
+  /*font-family: "Source Sans Pro", sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 14px;
   accent-color: #517896;
@@ -356,6 +366,7 @@ select {
   width: 100%;
   text-align: left;
   color: black;
+  font-weight: 400;
 }
 
 .furtherinfo {

@@ -231,8 +231,8 @@ input[type=number] {
   display: inline-block;
   /*background-color: rgb(230, 230, 230);
   border: solid rgb(230, 230, 230) 1px;*/
-  background-color: #5B7BD4;
-  border: solid #5B7BD4 1px;
+  background-color: rgb(18, 49, 135); /*#5B7BD4;*/
+  border: solid rgb(18, 49, 135) /*#5B7BD4;*/ 1px;
   border-radius: 15px;
   color: white;
 }

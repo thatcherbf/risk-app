@@ -157,7 +157,7 @@ input[type=number] {
   display: none;
 }
 
-#alert {
+.alert {
   color: rgb(255, 0, 0);
   font-weight: 700;
 }
@@ -291,6 +291,10 @@ input[type=number] {
   height: inherit;
   width: 45%;
   margin-right: 5%;
+}
+
+#ldl-value, #sbp-value {
+  font-weight: 400;
 }
 
 html {

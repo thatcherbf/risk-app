@@ -17,6 +17,11 @@ document.onkeydown = function(e) {
 }
 
 window.onload = function() {
+  //let graph_blue = "#123187";
+  let graph_blue = "#124e87";
+  let graph_light_blue = "#9fbed6";
+  let graph_red = "#d60e0e";
+
   // -------- BMI value edit script -------- //
   var height_units, weight_units, height, weight
 
@@ -218,7 +223,7 @@ window.onload = function() {
         type: "scatter",
         hovertemplate: 'age: %{x}' + '<br>risk: %{y:.2f}%<br>',
         line: {
-          color: 'rgb(18, 49, 135)',
+          color: graph_blue,
         }
       };
 
@@ -303,7 +308,7 @@ window.onload = function() {
           type: "scatter",
           hovertemplate: 'age: %{x}' + '<br>risk: %{y:.2f}%<br>',
           line: {
-            color: 'rgb(214, 14, 14)',
+            color: graph_red,
           }
         };
 
@@ -382,7 +387,7 @@ window.onload = function() {
           type: "scatter",
           hovertemplate: 'age: %{x}' + '<br>risk: %{y:.2f}%<br>',
           line: {
-            color: 'rgb(159, 190, 214)',
+            color: graph_light_blue,
           },
         }
 

@@ -1,5 +1,9 @@
 :root {
   --accentblue: #517896;
+  /*--graphblue: #123187;*/
+  --graphblue: #124e87;
+  --inputbackground: #f0f2f6;
+  --othertext: #848484;
 }
 
 .title {
@@ -112,9 +116,9 @@ input[type=number] {
 }
 
 #age-input, #TC-input, #LDL-input, #HDL-input, #SBP-input, #height-input, #weight-input, #BMI-input {
-  background-color: #f0f2f6;
+  background-color: var(--inputbackground);
   border-radius: 6px;
-  border: solid #f0f2f6 1px;
+  border: solid var(--inputbackground) 1px;
   height: 4vh;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -122,7 +126,7 @@ input[type=number] {
 }
 
 #sex-box, #trtbp-box, #diab-box, #smoke-box, #fmrtob-box, #famhx-box {
-  background-color: #f0f2f6;
+  background-color: var(--inputbackground);
   border-radius: 6px;
   height: 4vh;
   margin-top: 1%;
@@ -143,7 +147,7 @@ input[type=number] {
   float:left;
   width:46%;
   margin-right: 2.5%;
-  background-color:#f0f2f6;
+  background-color:var(--inputbackground);
   border-radius:6px;
   overflow:auto;
 }
@@ -186,13 +190,13 @@ input[type=number] {
 #alert-box {
   width: 50%;
   margin: 0 auto;
-  border: solid rgb(255, 0, 0) 1px;
+  border: solid red 1px;
   text-align: center;
   display: none;
 }
 
 .alert {
-  color: rgb(255, 0, 0);
+  color: red;
   font-weight: 700;
 }
 
@@ -244,8 +248,8 @@ input[type=number] {
   font-size: 40px;
   display: inline-block;
 
-  background-color: rgb(18, 49, 135); 
-  border: solid rgb(18, 49, 135) 1px;
+  background-color: var(--graphblue); 
+  border: solid var(--graphblue) 1px;
   border-radius: 15px;
   color: white;
 }
@@ -272,8 +276,8 @@ input[type=number] {
   text-align: center;
   font-size: 40px;
   display: inline-block;
-  background-color: rgb(18, 49, 135);
-  border: solid rgb(18, 49, 135) 1px;
+  background-color: var(--graphblue);
+  border: solid var(--graphblue) 1px;
   border-radius: 15px;
   color:white;
 }
@@ -287,8 +291,8 @@ input[type=number] {
   text-align: center;
   font-size: 40px;
   display: inline-block;
-  background-color: rgb(18, 49, 135);
-  border: solid rgb(18, 49, 135) 1px;
+  background-color: var(--graphblue);
+  border: solid var(--graphblue) 1px;
   border-radius: 15px;
   color:white;
 }
@@ -297,6 +301,11 @@ input[type=number] {
   font-size: 15;
   color: rgb(50, 50, 50);
   display: none;
+}
+
+.lpa-units {
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 
 #lpa-value {
@@ -373,12 +382,12 @@ select {
 .furtherinfo {
   width: 100%;
   text-align: left;
-  color: #848484;
+  color: var(--othertext);
 }
 
 .footer {
   width: 100%;
-  color: #848484;
+  color: var(--othertext);
   text-align: center;
 }
 

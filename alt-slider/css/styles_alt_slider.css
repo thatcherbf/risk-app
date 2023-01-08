@@ -203,7 +203,7 @@ input[type=number] {
   cursor: pointer;
   width: 20%;
   background-color: white;
-  border: solid #d6d6d9 1px;
+  border: solid var(--accentblue) 1px;
   padding: 1%;
   border-radius: 6px;
 }

@@ -7,14 +7,6 @@
   --othertext: #848484;
 }
 
-.title {
-  width: 100%;
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  align-content: center;
-}
-
 input:focus, textarea:focus, select:focus {
   outline: none;
 }
@@ -24,6 +16,21 @@ input:focus, textarea:focus, select:focus {
   display: inline-flex;
   list-style: none;
   justify-content: center;
+  align-content: center;
+}
+
+#logo {
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+}
+
+.title {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 100%;
+  display: inline-block;
+  justify-content: space-between;
   align-content: center;
 }
 

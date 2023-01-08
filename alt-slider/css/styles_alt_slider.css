@@ -1,0 +1,436 @@
+.title {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+.units-box-inputs {
+  width: 100%;
+  display: inline-flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+#title {
+  width: 100%;
+  text-align: center;
+  color: #517896;
+}
+
+#preamble-title {
+  width: 100%;
+  font-size: 150%;
+  font-weight: 400;
+}
+
+#preamble {
+  width: 100%;
+  font-size: 100%;
+}
+
+.cholesterol-label {
+  width: 100%;
+}
+
+.cholesterol-units {
+  width: 50%;
+  display: inline;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.height-units, .weight-units {
+  width: 25%;
+  display: inline;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.inputs {
+  height: auto;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.inputs-col1, .inputs-col2 {
+  flex: 50%;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.inputs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.outer-box {
+  float: none;
+  margin: 0 auto;
+  width: 90vh;
+  height: inherit;
+}
+
+.left-side, .right-side {
+  display: inline-block;
+  width: 5vh;
+  height: 100%;
+}
+
+.age-box, .TC-box, .LDL-box, .HDL-box, .SBP-box, .height-box, .weight-box, .BMI-box {
+  justify-content: space-between;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#age-input, #TC-input, #LDL-input, #HDL-input, #SBP-input, #height-input, #weight-input, #BMI-input {
+  background-color: #f0f2f6;
+  border-radius: 6px;
+  border: solid #f0f2f6 1px;
+  height: 4vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-left: 2%;
+}
+
+#sex-box, #trtbp-box, #diab-box, #smoke-box, #fmrtob-box, #famhx-box {
+  background-color: #f0f2f6;
+  border-radius: 6px;
+  height: 4vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.sex-box, .trtbp-box, .diab-box, .smoke-box, .fmrtob-box, .famhx-box {
+  height: 15%;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: inline-flex;
+}
+
+.sex-box label, .trtbp-box label, .diab-box label, .smoke-box label, .fmrtob-box label, .famhx-box label {
+  float:left;
+  width:46%;
+  margin-right: 2.5%;
+  background-color:#f0f2f6;
+  border-radius:6px;
+  overflow:auto;
+}
+
+.sex-box label span, .trtbp-box label span, .diab-box label span, .smoke-box label span, .fmrtob-box label span, .famhx-box label span {
+  text-align:center;
+  padding:1vh 0px;
+  display:block;
+}
+
+.sex-box label input, .trtbp-box label input, .diab-box label input, .smoke-box label input, .fmrtob-box label input, .famhx-box label input {
+  position:absolute;
+  visibility: hidden;
+}
+
+.sex-box input:checked + span, .trtbp-box input:checked + span, .diab-box input:checked + span, .smoke-box input:checked + span, .fmrtob-box input:checked + span, .famhx-box input:checked + span {
+  background-color:#517896;
+  color: white;
+}
+
+.input-items {
+  height: 15%;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#sex-label, #age-label, #TC-label, #LDL-label, #HDL-label, #SBP-label, #height-label, #weight-label, #BMI-label, #diab-label, #smoke-label, #fmrtob-label, #famhx-label, #trtbp-label {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#button-box {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#alert-box {
+  width: 50%;
+  margin: 0 auto;
+  border: solid rgb(255, 0, 0) 1px;
+  text-align: center;
+  display: none;
+}
+
+.alert {
+  color: rgb(255, 0, 0);
+  font-weight: 700;
+}
+
+#calculate-risk {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  width: 20%;
+  background-color: white;
+  border: solid #d6d6d9 1px;
+  padding: 1%;
+  border-radius: 6px;
+}
+
+#lpaGraph, #rxGraph {
+  width: 100%;
+}
+
+#lpaGraph-value-box, #rxGraph-value-box {
+  margin: 0 auto;
+  width: 100%;
+  color: rgb(50, 50, 50);
+  display: none;
+}
+
+#lpaGraph-risk-box, #rxGraph-risk-box {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  width: 100%;
+  display: flex;
+  height: 8vh;}
+
+#lpaGraph-risk, #rxGraph-risk {
+  width: 55% /*100%*/;
+  text-align: center;
+  font-size: 20;
+  display: inline-block;
+}
+
+#lpaGraph-risk-value, #rxGraph-risk-value {
+  margin-left: 5%;
+  width: 40%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 6vh;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  /*background-color: rgb(230, 230, 230);
+  border: solid rgb(230, 230, 230) 1px;*/
+  background-color: rgb(18, 49, 135); /*#5B7BD4;*/
+  border: solid rgb(18, 49, 135) /*#5B7BD4;*/ 1px;
+  border-radius: 15px;
+  color: white;
+}
+
+/*#lpaGraph-risk-treatment-box, #rxGraph-risk-treatment-box{
+  margin: 0 auto;
+  width: 100%;
+  height: inherit;
+  color: rgb(50, 50, 50);
+  display: inline-block;
+}*/
+
+#lpaGraph-risk-treatment-left-box, #lpaGraph-risk-treatment-right-box, #rxGraph-risk-treatment-left-box, #rxGraph-risk-treatment-right-box {
+  width: 100%;
+  display: flex;
+  height: 8vh;
+}
+
+#lpaGraph-risk-t-1, #lpaGraph-risk-t-2, #rxGraph-risk-t-1, #rxGraph-risk-t-2 {
+  /*margin-left: 5%;
+  margin-right: 5%;*/
+  width: 55%;
+  text-align: center;
+  font-size: 15px;
+  display: inline-block;
+}
+
+#lpaGraph-risk-value-t-1, #rxGraph-risk-value-t-1 {
+  margin-left: 5%;
+  width: 40%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 6vh;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  background-color: rgb(18, 49, 135) /*#5B7BD4*/;
+  border: solid rgb(18, 49, 135) /*#5B7BD4*/ 1px;
+  border-radius: 15px;
+  color:white;
+}
+
+#lpaGraph-risk-value-t-2, #rxGraph-risk-value-t-2 {
+  margin-left: 5%;
+  width: 40%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 6vh;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  background-color: rgb(18, 49, 135) /*#5B7BD4*/;
+  border: solid rgb(18, 49, 135) /*#5B7BD4*/ 1px;
+  border-radius: 15px;
+  color:white;
+}
+
+#lpa-after, #lpa-after-1 {
+  font-size: 15;
+  color: rgb(50, 50, 50);
+  display: none;
+}
+
+#lpa-value {
+  font-weight: 400;
+}
+
+#rx-sliders {
+  height: auto;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+.ldl-slider-box, .sbp-slider-box {
+  flex: 50%;
+  float: left;
+  height: inherit;
+  width: 45%;
+  margin-right: 5%;
+}
+
+#ldl-value, #sbp-value {
+  font-weight: 400;
+}
+
+html {
+  display: table-cell;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  /*font-family: "Source Sans Pro", sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  accent-color: #517896;
+  /*background-color: rgb(245, 249, 255);*/
+}
+
+img {
+  width: 15%;
+}
+
+label {
+  width: 100%;
+  cursor: default;
+}
+
+input {
+  cursor: pointer;
+}
+
+input[type=number] {
+  width: 95%;
+  padding: 2px;
+}
+
+select {
+  width: 95%;
+  padding: 2px;
+}
+
+#furtherinfo-title, #about-causal-ai {
+  width: 100%;
+  text-align: left;
+  color: black;
+  font-weight: 400;
+}
+
+.furtherinfo {
+  width: 100%;
+  text-align: left;
+  color: #848484;
+}
+
+.footer {
+  width: 100%;
+  color: #848484;
+  text-align: center;
+}
+
+/*
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #12317D;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #12317D;
+}*/
+
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 100%;
+}
+
+option {
+  padding: 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 0;
+}

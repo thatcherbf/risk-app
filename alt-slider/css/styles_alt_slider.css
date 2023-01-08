@@ -240,7 +240,7 @@ input[type=number] {
 }
 
 #lpaGraph-risk, #rxGraph-risk {
-  width: 75%;
+  width: 72.5%;
   text-align: left;
   font-size: 17.5px;
   font-weight: 400;
@@ -248,7 +248,7 @@ input[type=number] {
 }
 
 #lpaGraph-risk-value, #rxGraph-risk-value {
-  margin-left: 2.5%;
+  margin-left: 5%;
   margin-bottom: 2vh;
   width: 22.5%;
   height: 6vh;
@@ -271,7 +271,7 @@ input[type=number] {
 }
 
 #lpaGraph-risk-t-1, #lpaGraph-risk-t-2, #rxGraph-risk-t-1, #rxGraph-risk-t-2 {
-  width: 75%;
+  width: 72.5%;
   text-align: left;
   font-size: 17.5px;
   font-weight: 400;
@@ -279,7 +279,7 @@ input[type=number] {
 }
 
 #lpaGraph-risk-value-t-1, #rxGraph-risk-value-t-1 {
-  margin-left: 2.5%;
+  margin-left: 5%;
   margin-bottom: 2vh;
   width: 22.5%;
   height: 6vh;
@@ -296,7 +296,7 @@ input[type=number] {
 }
 
 #lpaGraph-risk-value-t-2 {
-  margin-left: 2.5%;
+  margin-left: 5%;
   margin-bottom: 2vh;
   width: 22.5%;
   height: 6vh;
@@ -313,7 +313,7 @@ input[type=number] {
 }
 
 #rxGraph-risk-value-t-2 {
-  margin-left: 2.5%;
+  margin-left: 5%;
   margin-bottom: 2vh;
   width: 22.5%;
   height: 6vh;

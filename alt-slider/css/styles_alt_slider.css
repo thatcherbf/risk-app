@@ -1,3 +1,7 @@
+:root {
+  --accentblue: #517896;
+}
+
 .title {
   width: 100%;
   display: flex;
@@ -21,7 +25,7 @@ input:focus, textarea:focus, select:focus {
 #title {
   width: 100%;
   text-align: center;
-  color: #517896;
+  color: var(--accentblue);
 }
 
 #preamble-title {
@@ -156,7 +160,7 @@ input[type=number] {
 }
 
 .sex-box input:checked + span, .trtbp-box input:checked + span, .diab-box input:checked + span, .smoke-box input:checked + span, .fmrtob-box input:checked + span, .famhx-box input:checked + span {
-  background-color:#517896;
+  background-color:var(--accentblue);
   color: white;
 }
 
@@ -220,7 +224,8 @@ input[type=number] {
   margin-bottom: 4vh;
   width: 100%;
   display: flex;
-  height: 8vh;}
+  height: 8vh;
+}
 
 #lpaGraph-risk, #rxGraph-risk {
   width: 55% /*100%*/;
@@ -238,21 +243,12 @@ input[type=number] {
   text-align: center;
   font-size: 40px;
   display: inline-block;
-  /*background-color: rgb(230, 230, 230);
-  border: solid rgb(230, 230, 230) 1px;*/
-  background-color: rgb(18, 49, 135); /*#5B7BD4;*/
-  border: solid rgb(18, 49, 135) /*#5B7BD4;*/ 1px;
+
+  background-color: rgb(18, 49, 135); 
+  border: solid rgb(18, 49, 135) 1px;
   border-radius: 15px;
   color: white;
 }
-
-/*#lpaGraph-risk-treatment-box, #rxGraph-risk-treatment-box{
-  margin: 0 auto;
-  width: 100%;
-  height: inherit;
-  color: rgb(50, 50, 50);
-  display: inline-block;
-}*/
 
 #lpaGraph-risk-treatment-left-box, #lpaGraph-risk-treatment-right-box, #rxGraph-risk-treatment-left-box, #rxGraph-risk-treatment-right-box {
   width: 100%;
@@ -261,8 +257,6 @@ input[type=number] {
 }
 
 #lpaGraph-risk-t-1, #lpaGraph-risk-t-2, #rxGraph-risk-t-1, #rxGraph-risk-t-2 {
-  /*margin-left: 5%;
-  margin-right: 5%;*/
   width: 55%;
   text-align: center;
   font-size: 15px;
@@ -278,8 +272,8 @@ input[type=number] {
   text-align: center;
   font-size: 40px;
   display: inline-block;
-  background-color: rgb(18, 49, 135) /*#5B7BD4*/;
-  border: solid rgb(18, 49, 135) /*#5B7BD4*/ 1px;
+  background-color: rgb(18, 49, 135);
+  border: solid rgb(18, 49, 135) 1px;
   border-radius: 15px;
   color:white;
 }
@@ -293,8 +287,8 @@ input[type=number] {
   text-align: center;
   font-size: 40px;
   display: inline-block;
-  background-color: rgb(18, 49, 135) /*#5B7BD4*/;
-  border: solid rgb(18, 49, 135) /*#5B7BD4*/ 1px;
+  background-color: rgb(18, 49, 135);
+  border: solid rgb(18, 49, 135) 1px;
   border-radius: 15px;
   color:white;
 }
@@ -343,8 +337,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 14px;
-  accent-color: #517896;
-  /*background-color: rgb(245, 249, 255);*/
+  accent-color: var(--accentblue);
 }
 
 img {
@@ -388,35 +381,6 @@ select {
   color: #848484;
   text-align: center;
 }
-
-/*
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #12317D;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #12317D;
-}*/
 
 datalist {
   display: flex;

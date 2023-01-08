@@ -70,7 +70,7 @@ window.onload = function() {
       }
       bmi = w / ((h / 100) ** 2)
       bmi = Math.round(bmi * 100) / 100;
-      document.getElementById("BMI-input").value = bmi
+      document.getElementById("BMI-input").value = bmi.toFixed(1);
     }
   }
   // -------- BMI value edit script -------- //
@@ -243,7 +243,7 @@ window.onload = function() {
       var text_lpa_t_1 = document.getElementById('lpaGraph-risk-t-1');
       var value_lpa_t_1 = document.getElementById('lpaGraph-risk-value-t-1');
 
-      var riskValue = Math.round(risk[risk.length - 1] * 100) / 100;
+      var riskValue = (risk[risk.length - 1]).toFixed(1);
       text_lpa.innerHTML = "Your risk of having a heart attack or stroke up to age 80 is:";
       text_lpa_t_1.innerHTML = text_lpa.innerHTML
 
@@ -261,7 +261,12 @@ window.onload = function() {
       rxGraph_text_t_1.innerHTML = rxGraph_text.innerHTML;
 
       rxGraph_value.innerHTML = value_lpa.innerHTML;
+      rxGraph_value.style.border = "solid " + graph_blue + " 1px";
+      rxGraph_value.style.backgroundColor = graph_blue;
+
       rxGraph_value_t_1.innerHTML = rxGraph_value.innerHTML;
+      rxGraph_value_t_1.style.border = "solid " + graph_blue + " 1px";
+      rxGraph_value_t_1.style.backgroundColor = graph_blue;
 
       // ------- slider change risk graph  -------//
       document.getElementById("lpa-after").style.display = 'block';
@@ -322,14 +327,19 @@ window.onload = function() {
         var text_lpa_t_2 = document.getElementById('lpaGraph-risk-t-2');
         var value_lpa_t_2 = document.getElementById('lpaGraph-risk-value-t-2');
 
-        var riskValue_lpa = Math.round(risk_lpa[risk_lpa.length - 1] * 100) / 100;
+        var riskValue_lpa = (risk_lpa[risk_lpa.length - 1]).toFixed(1);
         text_lpa_t_2.innerHTML = "With an Lp(a) level of " + lpaValue + " " + units_lpa + ", your estimated risk of having a heart attack or stroke up to age 80 changes from " + riskValue + "% to:";
         value_lpa_t_2.innerHTML = riskValue_lpa + "%";
 
         rxGraph_text.innerHTML = text_lpa_t_2.innerHTML;
         rxGraph_value.innerHTML = value_lpa_t_2.innerHTML;
+        rxGraph_value.style.border = "solid " + graph_red + " 1px";
+        rxGraph_value.style.backgroundColor = graph_red;
+
         rxGraph_text_t_1.innerHTML = text_lpa_t_2.innerHTML;
         rxGraph_value_t_1.innerHTML = value_lpa_t_2.innerHTML;
+        rxGraph_value_t_1.style.border = "solid " + graph_red + " 1px";
+        rxGraph_value_t_1.style.backgroundColor = graph_red;
 
         total_list = risk.concat(risk_lpa);
       }
@@ -404,7 +414,7 @@ window.onload = function() {
           total_list = risk.concat(risk_rx);
         }
         curr_risk = Math.max.apply(Math, total_list);
-        curr_risk = Math.round(curr_risk * 100)/100;
+        curr_risk = curr_risk.toFixed(1);
 
         var rxGraph_text_t_2 = document.getElementById('rxGraph-risk-t-2');
         var rxGraph_value_t_2 = document.getElementById('rxGraph-risk-value-t-2');
@@ -415,7 +425,7 @@ window.onload = function() {
         document.getElementById('rxGraph-risk-treatment-left-box').style.display = 'flex';
         document.getElementById('rxGraph-risk-treatment-right-box').style.display = 'flex';
 
-        var riskValue_rx = Math.round(risk_rx[risk_rx.length - 1] * 100) / 100;
+        var riskValue_rx = (risk_rx[risk_rx.length - 1]).toFixed(1);
 
         if (sbp_value.innerHTML != 0 && ldl_value.innerHTML != 0) {
           rxGraph_text_t_2.innerHTML = "With an Lp(a) of " + lpaValue + " " + units_lpa + " and an estimated risk of " + curr_risk + "%, lowering your LDL by " + ldl_value.innerHTML + " " + chol_units + " and your SBP by " + sbp_value.innerHTML + " mmHg beginning at age " + age + " will reduce your risk of having a heart attack or stroke to:";

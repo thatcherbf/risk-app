@@ -1,4 +1,5 @@
-alt/
 legacy/
-js/app.js
-/.DS_Store
+
+/js/app*
+
+.DS_Store

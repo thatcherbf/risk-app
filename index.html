@@ -195,7 +195,7 @@
                 <input type="radio" name="fmrtob-value" checked="checked" value=0><span>No</span>
               </label>
               <label>
-                <input type="radio" name="smoke-value" value=1><span>Yes</span>
+                <input type="radio" name="fmrtob-value" value=1><span>Yes</span>
               </label>
             </div>  
           </div>
@@ -269,7 +269,7 @@
             
             <datalist id="lpa_ticks">
               <option value="0" label="0">0</option>
-              <option value="500" label="500" id = "top-tick-lpa">500</option>
+              <option value="500" label="500" id = "top-tick-lpa"></option>
             </datalist>  
           </div>
           <br><br>
@@ -328,7 +328,7 @@
               
               <datalist id="ldl_ticks">
                 <option value="0" label="0">0</option>
-                <option value="1.5" label="1.5">1.5</option>
+                <option value="1.5" label="1.5" id = "top-tick-ldl">1.5</option>
               </datalist>
             </div>
 
@@ -336,11 +336,11 @@
               <label for="sbp-slider" id="sbp-slider-label">How much should I lower my blood pressure?</label>
               <span id="sbp-value-label"> - </span> <span id="sbp-value">0</span>
               <br><br>
-              <input type="range" min="0" max="15" value="0" step="1" class="slider" id="sbp-slider" list="sbp_ticks">
+              <input type="range" min="0" max="20" value="0" step="1" class="slider" id="sbp-slider" list="sbp_ticks">
             
               <datalist id="sbp_ticks">
                 <option value="0" label="0">0</option>
-                <option value="15" label="15">15</option>
+                <option value="20" label="20" id = "top-tick-sbp">20</option>
               </datalist>
             </div>
           </div>

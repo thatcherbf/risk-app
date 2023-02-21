@@ -195,6 +195,7 @@ input[type=number] {
   width: 100%;
   margin-top: 1%;
   margin-bottom: 1%;
+  font-size: 90%;
 }
 
 #button-box {
@@ -473,7 +474,12 @@ input[type="range"] {
 
   #calculate-risk {
     font-size: 75%;
-    width: 47.5%;
+    width: 80%;
+    margin: 2% 10%;
+    padding: 1vh 0;  
+  }
+  .cholesterol-units, .height-units, .weight-units {
+    font-size: 125%;
   }
 
 } */

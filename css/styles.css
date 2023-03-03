@@ -448,7 +448,7 @@ input[type="range"] {
   margin: 0;
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
   .slider {
     -webkit-appearance: none;
     width: 100%;
@@ -478,7 +478,7 @@ input[type="range"] {
     background: var(--accentblue);
     cursor: pointer;
   }
-}
+} */
 
 /* 
 .dropdown {

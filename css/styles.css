@@ -136,7 +136,6 @@ input[type=number] {
 .sex-box, .trtbp-box, .diab-box, .smoke-box, .fmrtob-box, .famhx-box {
   /* height: 15%; */
   height: 4vh;
-
   width: 100%;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -448,3 +447,55 @@ input[type="range"] {
   width: 100%;
   margin: 0;
 }
+
+/* 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropbtn {
+  background-color: var(--inputbackground);
+  border-radius: 6px;
+  border: solid var(--inputbackground) 1px;
+  width: 95%;
+  margin-top: 1%;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.buttontext {
+  -webkit-appearance: button;
+  font-weight: 100;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  border: solid var(--inputbackground) 1px;
+  background-color: var(--inputbackground);
+  width: 95%;
+}
+
+.dropdown-content label {
+  display: block;
+  margin-bottom: 1%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.dropbtn:hover{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown:hover .dropbtn {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+} */

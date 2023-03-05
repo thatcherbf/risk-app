@@ -269,7 +269,7 @@
         <br>
         <div class="lpa-after" id="lpa-after">
           <div>
-            <p id = "after-graph">This estimated risk does not take into account the Lp(a) levels in your blood. To see how much your Lp(a) level increases your risk of having a heart attack or stroke, enter your Lp(a) level using the slider bar below. A new line will
+            <p id = "after-graph">This estimated risk does not take into account the Lp(a) levels in your blood. To see how much your Lp(a) level increases your risk of having a heart attack or stroke, enter your Lp(a) level into the box below. A new line will
               appear on the graph showing you how much your Lp(a) level increases your risk of having a heart attack or stroke at all ages up to age 80.</p>  
           </div>
           <div class="lpa-units">
@@ -283,16 +283,18 @@
           </div>
 
           <div>
-            <label for="lpa-slider" id="lpa-slider-label">Enter your Lp(a) level to see how much your Lp(a) level increases your risk of heart attack and stroke.</label>
+            <label for="lpa-value" id="lpa-slider-label">Enter your Lp(a) level below to see how much it increases your risk of heart attack and stroke.</label>
             <br>
-            <span id="lpa-value-label">Lp(a) level:</span> <span id="lpa-value">50</span>
-            <br><br>
-            <input type="range" min="0" max="500" value="16.6" step="0.01" class="slider" id="lpa-slider" list="lpa_ticks">
+            <input type="number" id="lpa-value" name="lpa-value"><br>
+            <!-- <span id="lpa-value-label">Lp(a) level:</span>  -->
+            <!-- <span id="lpa-value">50</span> -->
+            <!-- <br><br> -->
+            <!-- <input type="range" min="0" max="500" value="16.6" step="0.01" class="slider" id="lpa-slider" list="lpa_ticks"> -->
             
-            <datalist id="lpa_ticks">
+            <!-- <datalist id="lpa_ticks">
               <option value="0" label="0">0</option>
               <option value="500" label="500" id = "top-tick-lpa"></option>
-            </datalist>  
+            </datalist>   -->
           </div>
           <br><br>
 

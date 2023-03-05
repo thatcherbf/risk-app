@@ -126,7 +126,7 @@ input[type=number] {
 #age-input, #TC-input, #LDL-input, #HDL-input, #SBP-input, #height-input, #weight-input, #BMI-input {
   background-color: var(--inputbackground);
   border-radius: 6px;
-  border: solid var(--inputbackground) 1px;
+  border: solid var(--accentblue) 1px;/*--inputbackground) 1px; */
   height: 4vh;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -159,15 +159,18 @@ input[type=number] {
   background-color:var(--inputbackground);
   border-radius:6px;
   overflow:auto;
+  border: solid var(--accentblue) 1px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .sex-box label span, .trtbp-box label span, .diab-box label span, .smoke-box label span, .fmrtob-box label span, .famhx-box label span {
   text-align:center;
   padding:1vh 0px;
   display:block;
-
   padding: 0;
   line-height: 4vh;
+  overflow: hidden;
 }
 
 .sex-box label input, .trtbp-box label input, .diab-box label input, .smoke-box label input, .fmrtob-box label input, .famhx-box label input {
@@ -281,7 +284,7 @@ input[type=number] {
 #lpaGraph-risk-t-1, #lpaGraph-risk-t-2, #rxGraph-risk-t-1, #rxGraph-risk-t-2 {
   width: 72.5%;
   text-align: left;
-  font-size: 17.5px;
+  font-size: 17px;
   font-weight: 400;
   display: inline-block;
 }
@@ -348,8 +351,18 @@ input[type=number] {
   margin-bottom: 2%;
 }
 
-#lpa-value {
+/* #lpa-value {
   font-weight: 400;
+} */
+#lpa-value {
+  background-color: var(--inputbackground);
+  border-radius: 6px;
+  border: solid var(--accentblue) 1px;/*--inputbackground) 1px; */
+  height: 4vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-left: 2%;
+  width: 100%;
 }
 
 #rx-sliders {

@@ -466,43 +466,6 @@ input[type="range"] {
   display: none;
 }
 
-.update {
-  float: none;
-  margin: 0 auto;
-  width: 90vh;
-  height: inherit;
-}
-
-.update-body {
-  margin-top: 25%;
-  margin-bottom: 35%;
-  height: 40%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.update-title {
-  margin: 0 auto;
-  width: 100%;
-  display: inline-block;
-  align-content: center;
-}
-
-#update-logo {
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
-}
-
-#update-progress {
-  width: 100%;
-  text-align: center;
-  font-size: 350%;
-  color: var(--accentblue);
-}
-
 .left-side, .right-side{
  display: none;
 }
@@ -516,10 +479,6 @@ input[type="range"] {
 
 #update-notice {
   width: 100%;
-}
-
-.update {
-  display: none;
 }
 
 /* UPDATE IN PROGRESS 2024 */

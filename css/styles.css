@@ -99,12 +99,14 @@ input:focus, textarea:focus, select:focus {
   margin: 0 auto;
   width: 90vh;
   height: inherit;
+  display: none;
 }
 
 .left-side, .right-side {
   display: inline-block;
   width: 5vh;
   height: 100%;
+  display: none;
 }
 
 .age-box, .TC-box, .LDL-box, .HDL-box, .SBP-box, .height-box, .weight-box, .BMI-box {
@@ -462,14 +464,6 @@ input[type="range"] {
 }
 
 /* UPDATE IN PROGRESS 2024 */
-.outer-box {
-  display: none;
-}
-
-.left-side, .right-side{
- display: none;
-}
-
 .update-2 {
   float: none;
   margin: 0 auto;

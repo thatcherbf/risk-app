@@ -20,9 +20,9 @@ input:focus, textarea:focus, select:focus {
 }
 
 #logo {
-  margin-left: 35%;
-  margin-right: 35%;
-  width: 30%;
+  margin-left: 32.5%;
+  margin-right: 32.5%;
+  width: 35%;
 }
 
 .title {
@@ -456,22 +456,4 @@ option {
 input[type="range"] {
   width: 100%;
   margin: 0;
-}
-
-
-.outer-box, .left-side, .right-side {
-  display: none !important;
-}
-
-.update-2 {
-  display: inline-block !important;
-  float: none;
-  margin: 0 auto;
-  width: 100vw;
-  height: inherit;
-}
-
-#update-notice {
-  display: inline-block !important;
-  width: 100%;
 }
